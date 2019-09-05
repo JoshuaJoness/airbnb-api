@@ -12,15 +12,19 @@ const Place = mongoose.model('place', {
 	type: {
 		type: String,
 		required: [true, 'type is required'],
+		},
 	city: {
 		type: String,
 		required: [true, 'city is required'],
+		},
 	country: {
 		type: String,
 		required: [true, 'country is required'],
-	price: {
+		},
+		price: {
 		type: Number,
 		required: [true, 'price is required'],
+		},
 	rating: {
 		type: Number,
 		default: 0
@@ -28,9 +32,12 @@ const Place = mongoose.model('place', {
 	guests: {
 		type: Number,
 		required: [true, 'number of guests required'],
+		},
 	bathrooms: {
 		type: Number,
 		required: [true, 'number of bathrooms required']
-})
+		}
+	}
+)
 
 module.exports = Place
