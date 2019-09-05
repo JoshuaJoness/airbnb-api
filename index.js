@@ -3,7 +3,7 @@ const app = express()
 
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost:27017/databasename', (userNewUrlParser: true), (err) => {
+mongoose.connect('mongodb://localhost:27017/airbnb', {userNewUrlParser: true}, (err) => {
 	err ? console.log(err) : console.log('Connected to MongoDB')
 })
 
