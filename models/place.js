@@ -21,7 +21,7 @@ const Place = mongoose.model('place', {
 		type: String,
 		required: [true, 'country is required'],
 		},
-		price: {
+	price: {
 		type: Number,
 		required: [true, 'price is required'],
 		},
