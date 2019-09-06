@@ -10,7 +10,7 @@ app.use(bodyParser.json())
 app.get('/', require('./controllers/root'))
 app.get('/places', require('./controllers/getPlaces'))
 app.post('/places', require('./controllers/postPlaces'))
-// app.get('/places/:id', require('./controllers/getPlace'))
+app.get('/places/:id', require('./controllers/getPlace'))
 // app.patch('/places/:id', require('./controllers/patchPlace'))
 
 
