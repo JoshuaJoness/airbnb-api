@@ -10,7 +10,8 @@ const Place = mongoose.model('place', {
 		required: [true, 'description is required']
 		},
 	type: {
-		type: String,
+		type: mongoose.Schema.Types.ObjectId,
+		ref: "type",
 		required: [true, 'type is required'],
 		},
 	city: {
