@@ -42,7 +42,13 @@ const Place = mongoose.model('place', {
 		type: mongoose.Schema.Types.ObjectId,
 		ref: "user",
 	},
-	images: [String]
+	images: [String],
+	amenities: [
+		{
+			type: mongoose.Schema.Types.ObjectId,
+			ref: 'amenity'
+		}
+	]
 }
 )
 
