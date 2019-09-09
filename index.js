@@ -16,6 +16,8 @@ app.delete('/places/:id', require('./controllers/deletePlace'))
 app.post('/type', require('./controllers/postType'))
 app.get('/types', require('./controllers/getTypes'))
 app.post('/users', require('./controllers/postUsers'))
+app.post('/amenities', require('./controllers/postAmenities'))
+app.get('/amenities', require('./controllers/getAmenities'))
 
 
 
