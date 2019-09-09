@@ -21,7 +21,7 @@ const User = mongoose.model('user',
 	password: {
 		type: String,
 		required: [true, 'password is required'],
-		selected: false
+		select: false
 	},
 })
 
