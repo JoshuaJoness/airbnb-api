@@ -24,3 +24,5 @@ const User = mongoose.model('user',
 		selected: false
 	},
 })
+
+module.exports = User

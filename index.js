@@ -15,6 +15,7 @@ app.patch('/places/:id', require('./controllers/patchPlace'))
 app.delete('/places/:id', require('./controllers/deletePlace'))
 app.post('/type', require('./controllers/postType'))
 app.get('/types', require('./controllers/getTypes'))
+app.post('/users', require('./controllers/postUsers'))
 
 
 
