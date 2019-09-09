@@ -41,8 +41,9 @@ const Place = mongoose.model('place', {
 	host: {
 		type: mongoose.Schema.Types.ObjectId,
 		ref: "user",
-	}
-	}
+	},
+	images: [String]
+}
 )
 
 module.exports = Place
