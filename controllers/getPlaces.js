@@ -1,7 +1,7 @@
 const Place = require('../models/place')
 
 module.exports = (req, res) => {
-Place.find({}).populate("type").then(data => {
+Place.find({}).populate("type").populate('host').then(data => {
 	res.send(data)
 })
 }
