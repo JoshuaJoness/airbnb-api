@@ -4,11 +4,11 @@ const Review = mongoose.model('review', {
 	author:{
 		type: mongoose.Schema.Types.ObjectId,
 		ref: 'user',
-		required: true
+		required: [true, 'Author is required']
 	},
 	date: {
 		type: Date,
-		default: Date.Now
+		default: Date.now()
 	},
 	rating: {
 		type: Number,
@@ -16,10 +16,13 @@ const Review = mongoose.model('review', {
 	},
 	content: {
 		type: String,
-		required: true
+		required: [true, 'Content is required']
 	},
 	place: {
 		type: mongoose.Schema.Types.ObjectId,
-		ref: 'place'
+		ref: 'place',
+		required: [true, 'Place is required']
 	}
 })
+
+module.exports = Review
