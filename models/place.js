@@ -48,7 +48,7 @@ const Place = mongoose.model('place', {
 			type: mongoose.Schema.Types.ObjectId,
 			ref: 'amenity'
 		}
-	]
+	],
 }
 )
 

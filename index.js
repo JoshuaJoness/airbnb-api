@@ -3,11 +3,13 @@ const app = express()
 const mongoose = require('mongoose')
 const database = require('./database')
 const bodyParser = require('body-parser')
+const cors = require('cors')
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.get('/', require('./controllers/root'))
+app.use(cors({credentials: true}))
 
 app.get('/places', require('./controllers/getPlaces'))
 app.post('/places', require('./controllers/postPlaces'))
@@ -25,6 +27,8 @@ app.get('/amenities', require('./controllers/getAmenities'))
 
 app.get('/reviews/:id', require('./controllers/getReviews'))
 app.post('/reviews', require('./controllers/postReviews'))
+
+app.post('/signup', require('./controllers/postSignup'))
 
 
 app.listen(4000, () => {
