@@ -31,7 +31,7 @@ app.post('/reviews', require('./controllers/postReviews'))
 
 app.post('/signup', require('./controllers/postSignup'))
 
-app.post('/login', require('./controllers/getLogin'))
+app.post('/login', require('./controllers/postLogin'))
 
 // app.get('/auth', require('./controllers/getAuth'))
 
