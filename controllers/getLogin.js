@@ -12,9 +12,9 @@ User.findOne({email: req.body.email}).select('password').then(data => {
 	console.log('?????????????????????', match);
 	if (match) {
 		let obj = data.toObject()
-		let token = jwt.sign(obj, '1mySecretCode1')
+		let token = jwt.sign(obj, process.env.SECRET)
 		console.log(']]]]]]]]]]]]]]]]]]]]]]]]]', token);
-		res.send({token: token})
+		res.send({token})
 	}
 }).catch(err => {
 	alert(err, 'No user exists...')

@@ -9,8 +9,8 @@ module.exports = (req, res) => {
 	User.create(req.body)
 		.then(data => {
 			let obj = data.toObject()
-			let token = jwt.sign(obj, '1mySecretCode1')
-			
+			let token = jwt.sign(obj, process.env.SECRET)
+
 			res.send(token)
 	}).catch (err => {
 		console.log(err)
