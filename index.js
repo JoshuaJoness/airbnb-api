@@ -33,7 +33,7 @@ app.post('/signup', require('./controllers/postSignup'))
 
 app.post('/login', require('./controllers/postLogin'))
 
-// app.get('/auth', require('./controllers/getAuth'))
+app.get('/auth', require('./controllers/getAuth'))
 
 
 app.listen(process.env.PORT, () => {

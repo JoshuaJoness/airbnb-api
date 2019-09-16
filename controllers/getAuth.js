@@ -4,12 +4,8 @@ const jwt = require('jsonwebtoken')
 
 module.exports = (req, res) => {
 console.log('----------------', req.body);
-let token = localstorage.gettoken
-User.findOne({jwt.verify(token, process.env.SECRET)}).then(data => {
-	console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>', data)
-		res.send({data})
-	}
-}).catch(err => {
-	alert(err, 'No user exists...')
-})
+let user = jwt.verify(req.query.token, process.env.SECRET)
+delete user.password
+// remove the password
+res.send(user)
 }
