@@ -4,6 +4,7 @@ const mongoose = require('mongoose')
 const database = require('./database')
 const bodyParser = require('body-parser')
 const cors = require('cors')
+const dotenv = require('dotenv').config()
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
@@ -30,7 +31,11 @@ app.post('/reviews', require('./controllers/postReviews'))
 
 app.post('/signup', require('./controllers/postSignup'))
 
+app.post('/login', require('./controllers/getLogin'))
 
-app.listen(4000, () => {
-	console.log('Ready on port 4000');
+app.get('/auth', require('./controllers/getAuth'))
+
+
+app.listen(process.env.PORT, () => {
+	console.log(`Ready on port ${process.env.PORT}`);
 })
