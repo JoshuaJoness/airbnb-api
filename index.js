@@ -1,10 +1,10 @@
 const express = require('express')
 const app = express()
+require('dotenv').config()
 const mongoose = require('mongoose')
 const database = require('./database')
 const bodyParser = require('body-parser')
 const cors = require('cors')
-const dotenv = require('dotenv').config()
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
