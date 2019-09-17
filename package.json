@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-		"start": "node index.js"
+    "start": "node index.js"
   },
   "author": "Joshua Jones",
   "license": "ISC",
@@ -16,6 +16,7 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.6.13",
-    "nodemon": "^1.19.2"
+    "nodemon": "^1.19.2",
+    "stripe": "^7.9.0"
   }
 }
