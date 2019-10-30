@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken')
 
 module.exports = (req, res) => {
 console.log('----------------', req.body);
-User.findOne({email: req.body.email}).select('name email password location').then(data => {
+User.findOne({email: req.body.email}).select('name email password location avatar').then(data => {
 	console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>', data.password)
 	//where do I put the error message if no such user is found?
 	//the data is not coming back with a password, had to use select, why?
