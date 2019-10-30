@@ -19,7 +19,6 @@ module.exports = (req, res) => {
     .lean()
     .then(data => {
         let places = data.map(p => {
-
             p.image = p.images[0]
      delete p.images
             return Review.find({place: p._id}).then(reviews => {

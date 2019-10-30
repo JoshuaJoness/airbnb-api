@@ -42,7 +42,12 @@ const Place = mongoose.model('place', {
 		type: mongoose.Schema.Types.ObjectId,
 		ref: "user",
 	},
-	images: [String],
+	images: [
+		{
+		type: String,
+		default: 'https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/for_sale_viax.svg'
+		}
+	],
 	amenities: [
 		{
 			type: mongoose.Schema.Types.ObjectId,
