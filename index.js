@@ -13,7 +13,7 @@ app.get('/', require('./controllers/root'))
 app.use(cors({credentials: true}))
 
 app.get('/places', require('./controllers/getPlaces'))
-app.post('/places', require('./controllers/postPlaces'))
+app.post('/place', require('./controllers/postPlace'))
 app.get('/places/:id', require('./controllers/getPlace'))
 app.patch('/places/:id', require('./controllers/patchPlace'))
 app.delete('/places/:id', require('./controllers/deletePlace'))
