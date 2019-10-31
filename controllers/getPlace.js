@@ -6,7 +6,7 @@ module.exports = (req,res) => {
 	Place.findById(req.params.id)
 	.populate('type')
 	.populate('amenities')
-	.populate({path: 'host', select: 'name avatar'})
+	.populate('host')
 	.lean()
 	.then(data => {
 		// {
