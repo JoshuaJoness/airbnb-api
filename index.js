@@ -12,8 +12,6 @@ app.use(bodyParser.json())
 app.get('/', require('./controllers/root'))
 app.use(cors({credentials: true}))
 
-app.post('/test', require('./controllers/postTest'))
-
 app.get('/places', require('./controllers/getPlaces'))
 app.post('/place', require('./controllers/postPlace'))
 app.get('/places/:id', require('./controllers/getPlace'))
