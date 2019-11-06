@@ -12,7 +12,7 @@ module.exports = (req, res) => {
         x.guests = {$gte: req.query.min_guests}
     }
     Place.find(x)
-    .select('bedrooms city country images price title type rating')
+    .select('bedrooms description city country images price title type rating')
     .populate('type')
     .populate('amenities')
     .populate({path: 'host', select: 'name avatar'})
